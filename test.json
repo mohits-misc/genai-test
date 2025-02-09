@@ -1,0 +1,14 @@
+{
+    "name": "CopyData",
+    "type": "Copy",
+    "typeProperties": {
+        "source": {
+            "type": "AzureSqlSource",
+            "sqlReaderQuery": "SELECT CAST(id AS INT) AS id, name FROM mytable"
+        },
+        "sink": {
+            "type": "AzureBlobSink",
+            "writeBatchSize": 1000
+        }
+    }
+}
